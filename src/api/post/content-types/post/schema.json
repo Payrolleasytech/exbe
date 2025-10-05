@@ -15,11 +15,6 @@
       "type": "string",
       "required": true
     },
-    "slug": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "excerpt": {
       "type": "blocks"
     },
@@ -51,6 +46,21 @@
       "relation": "manyToMany",
       "target": "api::tag.tag",
       "mappedBy": "posts"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "updates",
+        "getting-started",
+        "payroll-software",
+        "payroll-solution",
+        "umbrella-service",
+        "accountancy-service"
+      ]
     }
   }
 }
