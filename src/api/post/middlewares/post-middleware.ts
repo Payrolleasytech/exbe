@@ -4,8 +4,11 @@
 
 const populate = {
 
-    tags: {
-    fields: ["name"]
+    // tags: {
+    // fields: ["name"]
+    // },
+    tag: {
+      populate: "*"
     },
     author: {
       populate: {

@@ -4,7 +4,8 @@
 
 
 const populate = {
-  coverImage: true
+  coverImage: true,
+  Tag: true
 //   coverImage: {
 //     fields: ['url', 'alternativeText', 'width', 'height']
 //   },

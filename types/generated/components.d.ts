@@ -178,6 +178,16 @@ export interface GlobalServicesSecondSection extends Struct.ComponentSchema {
   };
 }
 
+export interface GlobalTags extends Struct.ComponentSchema {
+  collectionName: 'components_global_tags';
+  info: {
+    displayName: 'Tags';
+  };
+  attributes: {
+    tag: Schema.Attribute.String;
+  };
+}
+
 export interface GlobalTestimonialCard extends Struct.ComponentSchema {
   collectionName: 'components_global_testimonial_cards';
   info: {
@@ -292,6 +302,7 @@ declare module '@strapi/strapi' {
       'global.need-to-take-action-section': GlobalNeedToTakeActionSection;
       'global.service-card': GlobalServiceCard;
       'global.services-second-section': GlobalServicesSecondSection;
+      'global.tags': GlobalTags;
       'global.testimonial-card': GlobalTestimonialCard;
       'global.testimonial-section': GlobalTestimonialSection;
       'global.value-card': GlobalValueCard;

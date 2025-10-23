@@ -61,6 +61,11 @@
         "umbrella-service",
         "accountancy-service"
       ]
+    },
+    "Tag": {
+      "type": "component",
+      "component": "global.tags",
+      "repeatable": true
     }
   }
 }
