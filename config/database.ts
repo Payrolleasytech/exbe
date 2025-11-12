@@ -1,4 +1,4 @@
-import path from 'path';
+// import path from 'path';
 
 export default ({ env }) => {
   const client = env('DATABASE_CLIENT', 'postgres');
@@ -24,18 +24,18 @@ export default ({ env }) => {
     },
    postgres: {
   connection: {
-    connectionString: env('DATABASE_URL'),  // ← this line is key
+    connectionString: env('DATABASE_URL'),
     ssl: env.bool('DATABASE_SSL', true),    // Neon requires SSL
     schema: env('DATABASE_SCHEMA', 'public'),
   },
 },
 
-    sqlite: {
-      connection: {
-        filename: path.join(__dirname, '..', '..', env('DATABASE_FILENAME', '.tmp/data.db')),
-      },
-      useNullAsDefault: true,
-    },
+    // sqlite: {
+    //   connection: {
+    //     filename: path.join(__dirname, '..', '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+    //   },
+    //   useNullAsDefault: true,
+    // },
   };
 
   return {
